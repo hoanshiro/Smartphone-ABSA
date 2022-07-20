@@ -13,4 +13,5 @@ class AbsaConfig():
         self.EPOCHS = 10
         self.LEARNING_RATE = 1e-05
         self.THRESHOLD = 0.5  # threshold for the sigmoid
+        self.data_dir = 'data/model'
 
