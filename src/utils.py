@@ -205,7 +205,8 @@ class SupportModel:
         return comments, predictions, prediction_probs, target_values
 
     def predict_raw_text(self, model, tokenizer, raw_text):
-        cleaned_text = TextProcessing.clean_text(raw_text, remove_stopwords=False)
+        TexProcesser = TextProcessing()
+        cleaned_text = TexProcesser.clean_text(raw_text, remove_stopwords=False)
         #
         encoded_text = tokenizer.encode_plus(
             cleaned_text, max_length=conf.MAX_LEN, add_special_tokens=True,
